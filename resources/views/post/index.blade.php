@@ -6,6 +6,6 @@
     <div><a href="{{ route('post.create') }}" class="btn btn-primary">Add</a></div>
 
     @foreach($posts as $post)
-        <div>{{ $post->id }}. {{ $post->title }}</div>
+        <div><a href="{{ route('post.show', $post->id) }}">{{ $post->id }}. {{ $post->title }}</a></div>
     @endforeach
 @endsection
