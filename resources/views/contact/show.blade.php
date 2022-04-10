@@ -21,6 +21,7 @@
             </div>
             <!-- /END THE FEATURETTES -->
             <div>
+                <a href="{{ route('contact.edit', $contact->id) }}" class="btn btn-primary">Edit</a>
                 <a href="{{ route('contacts.index') }}" class="btn btn-primary">Back</a>
             </div>
         </div>
