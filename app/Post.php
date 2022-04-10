@@ -7,5 +7,5 @@ use Illuminate\Database\Eloquent\Model;
 class Post extends Model
 {
     protected $table = 'posts';
-    protected $guarded = []; //you can use [] or false
+    protected $guarded = false; //you can use [] or false
 }
