@@ -24,6 +24,7 @@ Route::post('/posts', 'PostController@store')->name('post.store');
 
 //Contact routes
 Route::get('/contacts', 'ContactController@index')->name('contacts.index');
+Route::get('/contact/create', 'ContactController@create')->name('contact.create');
 
 
 
