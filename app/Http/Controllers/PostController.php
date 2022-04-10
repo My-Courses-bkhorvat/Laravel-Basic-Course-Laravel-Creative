@@ -27,4 +27,16 @@ class PostController extends Controller
         Post::create($data);
         return redirect()->route('post.index');
     }
+    public function edit(Post $post){
+        return view('post.edit', compact('post'));
+    }
+    public function update(Post $post){
+        $data = request()->validate([
+            'title' => 'string',
+            'content' => 'string',
+            'image' => 'string'
+        ]);
+        $post->update($data);
+        return redirect()->route('post.show', $post->id);
+    }
 }
