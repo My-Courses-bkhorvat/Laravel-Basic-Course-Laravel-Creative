@@ -1,7 +1,7 @@
 @extends('loyats.main')
 
 @section('content')
-    <a  class="btn btn-primary">Add contact</a>
+    <a href="{{ route('contact.create') }}" class="btn btn-primary">Add contact</a>
 
     @foreach($contacts as $contact)
     <div class="container marketing">
@@ -14,7 +14,7 @@
 
         <div class="row featurette">
             <div class="col-md-7">
-                <h2 class="featurette-heading">{{ $contact->name }}: <span class="text-muted">{{ $contact->subject }}</span></h2>
+                <h2 class="featurette-heading">{{ $contact->name }}: <span class="text-muted"><a href="{{ route( 'contact.show', $contact->id ) }}">{{ $contact->subject }}</a></span></h2>
                 <p class="lead">{{ $contact->message }}</p>
                 <p>Email: {{ $contact->email }} Created at: {{ $contact->created_at }}</p>
             </div>
