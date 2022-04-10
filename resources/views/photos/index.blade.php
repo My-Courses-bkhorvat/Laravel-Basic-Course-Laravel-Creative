@@ -17,8 +17,12 @@
                             <div class="btn-group">
                                 <button type="button" class="btn btn-sm btn-outline-secondary"><a href="{{ route('photo.show', $photo->id) }}">Show</a></button>
                                 <button type="button" class="btn btn-sm btn-outline-secondary"><a href="{{ route('photo.create') }}">Create</a></button>
-                                <button type="button" class="btn btn-sm btn-outline-secondary">Edite</button>
-                                <button type="button" class="btn btn-sm btn-outline-secondary">Delete</button>
+                                <button type="button" class="btn btn-sm btn-outline-secondary"><a href="{{ route('photo.edit', $photo->id) }}">Edite</a></button>
+                                <form action="{{ route('photo.destroy', $photo->id) }}" method="post">
+                                    @csrf
+                                    @method('delete')
+                                    <button type="submit" class="btn btn-sm btn-outline-secondary">Delete</button>
+                                </form>
                             </div>
                             <small class="text-muted">{{ $photo->created_at }}</small>
                         </div>

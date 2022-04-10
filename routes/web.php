@@ -36,6 +36,9 @@ Route::get('/photos', 'PhotoController@index')->name('photos.index');
 Route::get('/photo/create', 'PhotoController@create')->name('photo.create');
 Route::get('/photo/{photo}', 'PhotoController@show')->name('photo.show');
 Route::post('/photos', 'PhotoController@store')->name('photo.store');
+Route::get('/photos/{photo}/edit', 'PhotoController@edit')->name('photo.edit');
+Route::patch('/photos/{photo}', 'PhotoController@update')->name('photo.update');
+Route::delete('/photos/{photo}', 'PhotoController@destroy')->name('photo.destroy');
 
 //about
 Route::get('/about', function (){
