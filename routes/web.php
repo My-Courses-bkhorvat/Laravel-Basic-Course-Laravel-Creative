@@ -31,8 +31,13 @@ Route::post('/contact', 'ContactController@store')->name('contact.store');
 Route::patch('/contact/{contact}', 'ContactController@update')->name('contact.update');
 Route::delete('/contact/{contact}', 'ContactController@destroy')->name('contact.destroy');
 
+//Photos routes
+Route::get('/photos', 'PhotoController@index')->name('photos.index');
+Route::get('/photo/create', 'PhotoController@create')->name('photo.create');
+Route::get('/photo/{photo}', 'PhotoController@show')->name('photo.show');
+Route::post('/photos', 'PhotoController@store')->name('photo.store');
 
-
+//about
 Route::get('/about', function (){
     return view('about');
 })->name('about.index');
