@@ -2,7 +2,8 @@
 
 @section('content')
     <div>
-        <form>
+        <form action="{{ route('post.store') }}">
+            @csrf
             <div class="mb-3">
                 <label for="title" class="form-label">Title</label>
                 <input type="text" name="title" class="form-control" id="title" placeholder="Title">
