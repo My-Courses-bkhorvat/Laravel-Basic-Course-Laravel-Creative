@@ -22,6 +22,11 @@
             <!-- /END THE FEATURETTES -->
             <div>
                 <a href="{{ route('contact.edit', $contact->id) }}" class="btn btn-primary">Edit</a>
+                <form action="{{ route('contact.destroy', $contact->id) }}" method="post">
+                    @csrf
+                    @method('delete')
+                    <input type="submit" class="btn btn-danger" value="Delete">
+                </form>
                 <a href="{{ route('contacts.index') }}" class="btn btn-primary">Back</a>
             </div>
         </div>
