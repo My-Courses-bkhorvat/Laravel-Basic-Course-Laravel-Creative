@@ -1,5 +1,5 @@
 @extends('loyats.main')
 
 @section('content')
-    This is about
+    this is days
 @endsection

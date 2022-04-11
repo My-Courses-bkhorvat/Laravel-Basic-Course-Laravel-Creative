@@ -13,7 +13,7 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-//Post routes
+//Routes to Posts
 Route::get('/posts', 'PostController@index')->name('post.index');
 Route::get('/post/create', 'PostController@create')->name('post.create');
 Route::get('/posts/{post}', 'PostController@show')->name('post.show');
@@ -22,7 +22,7 @@ Route::patch('/posts/{post}', 'PostController@update')->name('post.update');
 Route::delete('/posts/{post}', 'PostController@destroy')->name('post.destroy');
 Route::post('/posts', 'PostController@store')->name('post.store');
 
-//Contact routes
+//Routes to Contacts
 Route::get('/contacts', 'ContactController@index')->name('contacts.index');
 Route::get('/contact/create', 'ContactController@create')->name('contact.create');
 Route::get('/contact/{contact}', 'ContactController@show')->name('contact.show');
@@ -31,7 +31,7 @@ Route::post('/contact', 'ContactController@store')->name('contact.store');
 Route::patch('/contact/{contact}', 'ContactController@update')->name('contact.update');
 Route::delete('/contact/{contact}', 'ContactController@destroy')->name('contact.destroy');
 
-//Photos routes
+//Routes to Photos
 Route::get('/photos', 'PhotoController@index')->name('photos.index');
 Route::get('/photo/create', 'PhotoController@create')->name('photo.create');
 Route::get('/photo/{photo}', 'PhotoController@show')->name('photo.show');
@@ -39,6 +39,26 @@ Route::post('/photos', 'PhotoController@store')->name('photo.store');
 Route::get('/photos/{photo}/edit', 'PhotoController@edit')->name('photo.edit');
 Route::patch('/photos/{photo}', 'PhotoController@update')->name('photo.update');
 Route::delete('/photos/{photo}', 'PhotoController@destroy')->name('photo.destroy');
+
+//Routes to Friends
+
+Route::get('/friends', 'FriendController@index')->name('friends.index');
+
+//Routes to Tasks
+
+Route::get('/tasks', 'TaskController@index')->name('tasks.index');
+
+//Routes to Skills
+
+Route::get('/skills', 'SkillController@index')->name('skills.index');
+
+//Routes to Days
+
+Route::get('/days', 'DayController@index')->name('days.index');
+
+//Routes to Habits
+
+Route::get('/habits', 'HabitController@index')->name('habits.index');
 
 
 

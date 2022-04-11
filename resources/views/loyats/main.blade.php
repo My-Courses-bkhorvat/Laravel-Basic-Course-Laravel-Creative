@@ -28,6 +28,21 @@
                             <li class="nav-item">
                                 <a class="nav-link" href="{{ route('photos.index') }}">Photos</a>
                             </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="{{ route('friends.index') }}">Friends</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="{{ route('tasks.index') }}">Tasks</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="{{ route('skills.index') }}">Skills</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="{{ route('days.index') }}">Days</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="{{ route('habits.index') }}">Habits</a>
+                            </li>
                         </ul>
                         <form class="d-flex">
                             <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
