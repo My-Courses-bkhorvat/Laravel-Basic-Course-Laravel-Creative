@@ -40,8 +40,5 @@ Route::get('/photos/{photo}/edit', 'PhotoController@edit')->name('photo.edit');
 Route::patch('/photos/{photo}', 'PhotoController@update')->name('photo.update');
 Route::delete('/photos/{photo}', 'PhotoController@destroy')->name('photo.destroy');
 
-//about
-Route::get('/about', function (){
-    return view('about');
-})->name('about.index');
+
 
