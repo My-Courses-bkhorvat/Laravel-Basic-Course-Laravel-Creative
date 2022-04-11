@@ -21,6 +21,8 @@ class CreateContactsTable extends Migration
             $table->text('message');
             $table->string('photo');
             $table->timestamps();
+
+            $table->softDeletes();
         });
     }
 

@@ -18,6 +18,8 @@ class CreatePhotosTable extends Migration
             $table->string('photo');
             $table->string('description');
             $table->timestamps();
+
+            $table->softDeletes();
         });
     }
 
