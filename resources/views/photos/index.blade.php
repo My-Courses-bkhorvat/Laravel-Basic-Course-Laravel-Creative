@@ -1,5 +1,9 @@
 @extends('loyats.main')
 
+@section('add_button')
+    <a href="{{ route('photo.create') }}" class="btn btn-outline-success">Add photo</a>
+@endsection
+
 @section('content')
 
     <div class="container">

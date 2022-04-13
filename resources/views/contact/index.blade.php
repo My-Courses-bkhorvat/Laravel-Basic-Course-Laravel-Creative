@@ -1,7 +1,10 @@
 @extends('loyats.main')
 
+@section('add_button')
+    <a href="{{ route('contact.create') }}" class="btn btn-outline-success">Add contact</a>
+@endsection
+
 @section('content')
-    <a href="{{ route('contact.create') }}" class="btn btn-primary">Add contact</a>
 
     @foreach($contacts as $contact)
     <div class="container marketing">

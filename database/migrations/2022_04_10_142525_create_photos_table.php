@@ -19,6 +19,10 @@ class CreatePhotosTable extends Migration
             $table->string('description');
             $table->timestamps();
 
+            $table->unsignedBigInteger('category_id')->nullable();
+            $table->index('category_id', 'photo_category_idx');
+            $table->foreign('category_id', 'photo_category_fk')->on('categories')->references('id');
+
             $table->softDeletes();
         });
     }
