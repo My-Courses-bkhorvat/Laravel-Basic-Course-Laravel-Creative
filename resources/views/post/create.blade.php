@@ -20,7 +20,7 @@
                 @endforeach
             </select>
 
-            <label for="tags" class="form-label">Title</label>
+            <label for="tags" class="form-label">Tags</label>
             <select class="form-select" multiple aria-label="multiple select example" id="tags" name="tags[]">
                 @foreach($tags as $tag)
                 <option value="{{ $tag->id }}">{{ $tag->title }}</option>
