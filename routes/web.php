@@ -14,13 +14,16 @@ use Illuminate\Support\Facades\Route;
 */
 
 //Routes to Posts
-Route::get('/posts', 'PostController@index')->name('post.index');
-Route::get('/post/create', 'PostController@create')->name('post.create');
-Route::get('/posts/{post}', 'PostController@show')->name('post.show');
-Route::get('/posts/{post}/edit', 'PostController@edit')->name('post.edit');
-Route::patch('/posts/{post}', 'PostController@update')->name('post.update');
-Route::delete('/posts/{post}', 'PostController@destroy')->name('post.destroy');
-Route::post('/posts', 'PostController@store')->name('post.store');
+Route::group(['namespace' => 'Post'], function (){
+    Route::get('/posts', 'IndexController')->name('post.index');
+    Route::get('/post/create', 'CreateController')->name('post.create');
+    Route::get('/posts/{post}', 'ShowController')->name('post.show');
+    Route::get('/posts/{post}/edit', 'EditController')->name('post.edit');
+    Route::patch('/posts/{post}', 'UpdateController')->name('post.update');
+    Route::delete('/posts/{post}', 'DestroyController')->name('post.destroy');
+    Route::post('/posts', 'StoreController')->name('post.store');
+});
+
 
 //Routes to Contacts
 Route::get('/contacts', 'ContactController@index')->name('contacts.index');
