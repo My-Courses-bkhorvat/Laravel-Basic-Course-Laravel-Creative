@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Category;
 use App\Post;
+use App\PostTag;
 use Illuminate\Http\Request;
 use App\Tag;
 
@@ -19,7 +20,9 @@ class PostController extends Controller
     public function create()
     {
         $categories = Category::all();
-        return view('post.create', compact('categories'));
+        $tags = Tag::all();
+
+        return view('post.create', compact('categories', 'tags'));
     }
 
     public function show(Post $post)
@@ -34,9 +37,23 @@ class PostController extends Controller
             'title' => 'string',
             'content' => 'string',
             'image' => 'string',
-            'category_id' => ''
+            'category_id' => '',
+            'tags' => ''
         ]);
-        Post::create($data);
+
+        $tags = $data['tags'];
+        unset($data['tags']);
+/*        Пример как это работает без метода attach
+        $post = Post::create($data);
+        foreach ($tags as $tag) {
+            PostTag::firstOrcreate([
+                'tag_id' => $tag,
+                'post_id' => $post->id
+            ]);
+        }
+*/
+        $post = Post::create($data);
+        $post->tags()->attach($tags);
         return redirect()->route('post.index');
     }
 

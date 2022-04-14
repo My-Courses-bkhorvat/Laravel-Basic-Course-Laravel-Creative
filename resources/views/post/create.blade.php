@@ -13,9 +13,17 @@
                 <input type="text" name="image" class="form-control" id="image" placeholder="Image">
             </div>
 
+            <label for="category" class="form-label">Category</label>
             <select class="form-select" aria-label="Default select example" id="category" name="category_id">
                 @foreach($categories as $category)
                     <option value="{{ $category->id }}">{{ $category->title }}</option>
+                @endforeach
+            </select>
+
+            <label for="tags" class="form-label">Title</label>
+            <select class="form-select" multiple aria-label="multiple select example" id="tags" name="tags[]">
+                @foreach($tags as $tag)
+                <option value="{{ $tag->id }}">{{ $tag->title }}</option>
                 @endforeach
             </select>
 
