@@ -1,14 +1,14 @@
 <?php
 
-namespace App;
+namespace App\Model;
 
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\SoftDeletes;
 
-class Photo extends Model
+class Contact extends Model
 {
     use SoftDeletes;
 
-    protected $table = 'photos';
+    protected $table = 'contacts';
     protected $guarded = false;
 }

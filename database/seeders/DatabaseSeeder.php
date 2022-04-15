@@ -1,6 +1,7 @@
 <?php
+namespace Database\Seeders;
 
-use App\Post;
+use App\Model\Post;
 use Illuminate\Database\Seeder;
 
 class DatabaseSeeder extends Seeder

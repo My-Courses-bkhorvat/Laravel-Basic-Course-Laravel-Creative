@@ -1,21 +1,24 @@
 <?php
 
-namespace App;
+namespace App\Model;
 
+use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\SoftDeletes;
-use PhpParser\Builder\Class_;
 
 class Post extends Model
 {
+    use HasFactory;
     use SoftDeletes;
 
     protected $table = 'posts';
     protected $guarded = false; //you can use [] or false
 
-    public function category(){
+    public function category()
+    {
         return $this->belongsTo(Category::class, 'category_id', 'id');
     }
+
     public function tags()
     {
         return $this->belongsToMany(Tag::class, 'post_tags', 'post_id', 'tag_id');

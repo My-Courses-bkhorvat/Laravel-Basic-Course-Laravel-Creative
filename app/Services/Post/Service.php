@@ -2,7 +2,7 @@
 
 namespace App\Services\Post;
 
-use App\Post;
+use App\Model\Post;
 
 class Service
 {

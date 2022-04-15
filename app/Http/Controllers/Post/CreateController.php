@@ -2,8 +2,8 @@
 
 namespace App\Http\Controllers\Post;
 
-use App\Category;
-use App\Tag;
+use App\Model\Category;
+use App\Model\Tag;
 
 class CreateController extends BaseController
 {
