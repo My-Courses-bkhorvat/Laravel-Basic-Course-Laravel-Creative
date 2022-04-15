@@ -2,7 +2,7 @@
 
 namespace App\Http\Controllers;
 
-use App\Model\Contact;
+use App\Models\Contact;
 
 class ContactController extends Controller
 {

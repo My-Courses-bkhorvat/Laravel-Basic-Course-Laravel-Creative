@@ -2,9 +2,9 @@
 
 namespace App\Http\Controllers\Post;
 
-use App\Model\Category;
-use App\Model\Post;
-use App\Model\Tag;
+use App\Models\Category;
+use App\Models\Post;
+use App\Models\Tag;
 
 class EditController extends BaseController
 {

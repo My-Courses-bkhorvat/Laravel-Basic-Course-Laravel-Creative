@@ -2,7 +2,7 @@
 
 namespace App\Http\Controllers;
 
-use App\Model\Photo;
+use App\Models\Photo;
 
 class PhotoController extends Controller
 {

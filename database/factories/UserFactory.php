@@ -4,7 +4,7 @@
 
 namespace Database\Factories;
 
-use App\Model\User;
+use App\Models\User;
 use Faker\Generator as Faker;
 use Illuminate\Support\Str;
 

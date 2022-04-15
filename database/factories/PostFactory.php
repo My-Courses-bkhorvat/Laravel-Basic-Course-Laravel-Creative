@@ -1,15 +1,26 @@
 <?php
 
-/** @var \Illuminate\Database\Eloquent\Factory $factory */
-
 namespace Database\Factories;
 
-use App\Model\Post;
-use Faker\Generator as Faker;
+use App\Models\Category;
+use Illuminate\Database\Eloquent\Factories\Factory;
 
-$factory->define(Post::class, function (Faker $faker) {
-    return [
-        'name' => 'askdm',
-        'surname' => 'mkmkm'
-    ];
-});
+class PostFactory extends Factory
+{
+    /**
+     * Define the model's default state.
+     *
+     * @return array
+     */
+    public function definition()
+    {
+        return [
+            'title' => $this->faker->sentence('5'),
+            'content' => $this->faker->text,
+            'image' => $this->faker->imageUrl(),
+            'likes' => random_int(1, 2000),
+            'is_published' => 1,
+            'category_id' => Category::all()->random()->id,
+        ];
+    }
+}
