@@ -13,6 +13,7 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
+Route::get('/', 'HomeController@index');
 //Routes to main
 Route::get('/main', 'MainController@index')->name('main.index');
 
@@ -76,3 +77,7 @@ Route::get('/habits', 'HabitController@index')->name('habits.index');
 
 
 
+
+Auth::routes();
+
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
