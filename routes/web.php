@@ -13,6 +13,9 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
+//Routes to main
+Route::get('/main', 'MainController@index')->name('main.index');
+
 //Routes to Posts
 Route::group(['namespace' => 'Post'], function (){
     Route::get('/posts', 'IndexController')->name('post.index');
