@@ -1,4 +1,4 @@
-@extends('loyats.main')
+@extends('layouts.main')
 
 @section('content')
         this is fried

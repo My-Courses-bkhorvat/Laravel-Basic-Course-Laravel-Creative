@@ -1,4 +1,4 @@
-@extends('loyats.admin')
+@extends('layouts.admin')
 
 @section('content')
     <div>

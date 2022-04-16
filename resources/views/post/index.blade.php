@@ -1,4 +1,4 @@
-@extends('loyats.main')
+@extends('layouts.main')
 
 @section('add_button')
     <a href="{{ route('post.create') }}" class="btn btn-outline-success">Add post</a>

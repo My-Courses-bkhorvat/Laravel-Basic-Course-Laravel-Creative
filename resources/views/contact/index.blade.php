@@ -1,4 +1,4 @@
-@extends('loyats.main')
+@extends('layouts.main')
 
 @section('add_button')
     <a href="{{ route('contact.create') }}" class="btn btn-outline-success">Add contact</a>
