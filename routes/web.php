@@ -13,13 +13,13 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', 'HomeController@index');
+Route::get('/', 'HomeController@index')->name('home');
 //Routes to main
 Route::get('/main', 'MainController@index')->name('main.index');
 
 //Routes to admin panel
 
-Route::group(['namespace' => 'Admin', 'prefix' => 'admin'], function (){
+Route::group(['namespace' => 'Admin', 'prefix' => 'admin', 'middleware' => 'admin'], function (){
     Route::group(['namespace' => 'Post'], function(){
         Route::get('/post', 'IndexController')->name('admin.post.index');
     });
