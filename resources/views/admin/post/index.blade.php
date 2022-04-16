@@ -1,8 +1,4 @@
-@extends('loyats.main')
-
-@section('add_button')
-    <a href="{{ route('post.create') }}" class="btn btn-outline-success">Add post</a>
-@endsection
+@extends('loyats.admin')
 
 @section('content')
     <div>
@@ -17,4 +13,3 @@
     </div>
 
 @endsection
-
