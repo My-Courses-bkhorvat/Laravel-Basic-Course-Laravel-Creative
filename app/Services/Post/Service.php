@@ -6,14 +6,20 @@ use App\Models\Post;
 
 class Service
 {
-    public function store($data){
+    public function store($data)
+    {
+
         $tags = $data['tags'];
         unset($data['tags']);
 
         $post = Post::create($data);
         $post->tags()->attach($tags);
+
+        return $post;
     }
-    public function update($post, $data){
+
+    public function update($post, $data)
+    {
         $tags = $data['tags'];
         unset($data['tags']);
 
