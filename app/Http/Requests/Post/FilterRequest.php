@@ -29,6 +29,7 @@ class FilterRequest extends FormRequest
             'image' => 'string',
             'likes' => '',
             'category_id' => '',
+            'category' => '',
             'tags' => '',
             'page' => '',
             'per_page' => ''
